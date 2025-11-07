@@ -1,4 +1,4 @@
-package org.telegram.messenger.forkgram
+package org.telegram.messenger.Telegram
 
 import org.telegram.messenger.AccountInstance
 import org.telegram.messenger.MessageObject

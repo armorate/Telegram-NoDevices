@@ -660,16 +660,16 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
     private void updateRows(boolean notify) {
         rowCount = 0;
 
-        securitySectionRow = rowCount++;
-        passwordRow = rowCount++;
-        autoDeleteMesages = rowCount++;
-        passcodeRow = rowCount++;
+        securitySectionRow = -1;
+        passwordRow = -1;
+        autoDeleteMesages = -1;
+        passcodeRow = -1;
         if (currentPassword != null ? currentPassword.login_email_pattern != null : SharedConfig.hasEmailLogin) {
-            emailLoginRow = rowCount++;
+            emailLoginRow = -1;
         } else {
             emailLoginRow = -1;
         }
-        blockedRow = rowCount++;
+        blockedRow = -1;
         if (currentPassword != null) {
             boolean hasEmail = currentPassword.login_email_pattern != null;
             if (SharedConfig.hasEmailLogin != hasEmail) {
@@ -677,71 +677,71 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
                 SharedConfig.saveConfig();
             }
         }
-        sessionsRow = rowCount++;
-        sessionsDetailRow = rowCount++;
+        sessionsRow = -1;
+        sessionsDetailRow = -1;
 
-        privacySectionRow = rowCount++;
-        phoneNumberRow = rowCount++;
-        lastSeenRow = rowCount++;
-        profilePhotoRow = rowCount++;
-        forwardsRow = rowCount++;
-        callsRow = rowCount++;
+        privacySectionRow = -1;
+        phoneNumberRow = -1;
+        lastSeenRow = -1;
+        profilePhotoRow = -1;
+        forwardsRow = -1;
+        callsRow = -1;
         groupsDetailRow = -1;
         if (!getMessagesController().premiumFeaturesBlocked() || getUserConfig().isPremium()) {
-            voicesRow = rowCount++;
-            noncontactsRow = rowCount++;
+            voicesRow = -1;
+            noncontactsRow = -1;
         } else {
             voicesRow = -1;
             noncontactsRow = -1;
         }
-        birthdayRow = rowCount++;
-        giftsRow = rowCount++;
-        bioRow = rowCount++;
-        groupsRow = rowCount++;
-        privacyShadowRow = rowCount++;
+        birthdayRow = -1;
+        giftsRow = -1;
+        bioRow = -1;
+        groupsRow = -1;
+        privacyShadowRow = -1;
 
         if (getMessagesController().autoarchiveAvailable || getUserConfig().isPremium()) {
-            newChatsHeaderRow = rowCount++;
-            newChatsRow = rowCount++;
-            newChatsSectionRow = rowCount++;
+            newChatsHeaderRow = -1;
+            newChatsRow = -1;
+            newChatsSectionRow = -1;
         } else {
             newChatsHeaderRow = -1;
             newChatsRow = -1;
             newChatsSectionRow = -1;
         }
-        advancedSectionRow = rowCount++;
-        deleteAccountRow = rowCount++;
-        deleteAccountDetailRow = rowCount++;
-        botsSectionRow = rowCount++;
+        advancedSectionRow = -1;
+        deleteAccountRow = -1;
+        deleteAccountDetailRow = -1;
+        botsSectionRow = -1;
         if (getUserConfig().hasSecureData) {
-            passportRow = rowCount++;
+            passportRow = -1;
         } else {
             passportRow = -1;
         }
-        paymentsClearRow = rowCount++;
+        paymentsClearRow = -1;
         if (!biometryBots.isEmpty()) {
-            botsBiometryRow = rowCount++;
+            botsBiometryRow = -1;
         } else {
             botsBiometryRow = -1;
         }
         if (webSessionsActivityPreload != null && webSessionsActivityPreload.getSessionsCount() > 0) {
-            webSessionsRow = rowCount++;
-            botsDetailRow = rowCount++;
+            webSessionsRow = -1;
+            botsDetailRow = -1;
             botsAndWebsitesShadowRow = -1;
         } else {
             webSessionsRow = -1;
             botsDetailRow = -1;
-            botsAndWebsitesShadowRow = rowCount++;
+            botsAndWebsitesShadowRow = -1;
         }
-        contactsSectionRow = rowCount++;
-        contactsDeleteRow = rowCount++;
-        contactsSyncRow = rowCount++;
-        contactsSuggestRow = rowCount++;
-        contactsDetailRow = rowCount++;
-        secretSectionRow = rowCount++;
-        secretMapRow = rowCount++;
-        secretWebpageRow = rowCount++;
-        secretDetailRow = rowCount++;
+        contactsSectionRow = -1;
+        contactsDeleteRow = -1;
+        contactsSyncRow = -1;
+        contactsSuggestRow = -1;
+        contactsDetailRow = -1;
+        secretSectionRow = -1;
+        secretMapRow = -1;
+        secretWebpageRow = -1;
+        secretDetailRow = -1;
         if (listAdapter != null && notify) {
             listAdapter.notifyDataSetChanged();
         }

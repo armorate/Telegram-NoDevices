@@ -1,12 +1,12 @@
 # Fork Client — Unofficial Telegram Messenger for Android
-![image](https://raw.githubusercontent.com/Forkgram/TelegramAndroid/58938f6bbe4159b90c38d9b94c9a70d57bedf3e0/TMessagesProj/src/main/res/drawable-xxhdpi/ic_launcher.png)  
+![image](https://raw.githubusercontent.com/Telegram/TelegramAndroid/58938f6bbe4159b90c38d9b94c9a70d57bedf3e0/TMessagesProj/src/main/res/drawable-xxhdpi/ic_launcher.png)  
 Fork Client is a fork of the official Telegram for Android application.  
 [<img src="https://f-droid.org/badge/get-it-on.png"
       alt="Get it on F-Droid"
-      height="80">](https://f-droid.org/app/org.forkgram.messenger)
+      height="80">](https://f-droid.org/app/org.Telegram.messenger)
 
-![Build Status](https://travis-ci.org//Forkgram/TelegramAndroid.svg?branch=dev)
-[![Github All Releases](https://img.shields.io/github/downloads/Forkgram/TelegramAndroid/total.svg)](https://github.com/Forkgram/TelegramAndroid/releases)
+![Build Status](https://travis-ci.org//Telegram/TelegramAndroid.svg?branch=dev)
+[![Github All Releases](https://img.shields.io/github/downloads/Telegram/TelegramAndroid/total.svg)](https://github.com/Telegram/TelegramAndroid/releases)
 
 ## Features:
 
@@ -51,4 +51,4 @@ Fork Client is a fork of the official Telegram for Android application.
 
 
 ## Downloads:
-You can download binaries from Releases or from my [Telegram channel Forkgram](https://t.me/forkgram).
+You can download binaries from Releases or from my [Telegram channel Telegram](https://t.me/Telegram).

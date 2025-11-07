@@ -1,4 +1,4 @@
-package org.telegram.messenger.forkgram
+package org.telegram.messenger.Telegram
 
 import android.app.DownloadManager
 import android.content.BroadcastReceiver

@@ -206,59 +206,59 @@ public class ForkSettingsActivity extends BaseFragment {
 
         rowCount = 0;
         
-        sectionRows.add(rowCount++);
-        hideSensitiveDataRow = SharedConfig.isUserOwner() ? -1 : rowCount++;
-        squareAvatarsRow = rowCount++;
-        photoHasStickerRow = rowCount++;
-        showNotificationContent = rowCount++;
-        hideBottomButton = SharedConfig.isUserOwner() ? rowCount++ : -1;
-        lockPremium = rowCount++;
+        sectionRows.add(-1);
+        hideSensitiveDataRow = SharedConfig.isUserOwner() ? -1 : -1;
+        squareAvatarsRow = -1;
+        photoHasStickerRow = -1;
+        showNotificationContent = -1;
+        hideBottomButton = SharedConfig.isUserOwner() ? -1 : -1;
+        lockPremium = -1;
     
-        emptyRows.add(rowCount++);
-        sectionRows.add(rowCount++);
-        syncPinsRow = rowCount++;
-        unmutedOnTopRow = rowCount++;
-        openArchiveOnPull = rowCount++;
-        hideStoriesInArchiveRow = rowCount++;
-        disableThumbsInDialogList = rowCount++;
-        disableGlobalSearch = rowCount++;
-        enableLastSeenDots = rowCount++;
-        customTitleRow = rowCount++;
+        emptyRows.add(-1);
+        sectionRows.add(-1);
+        syncPinsRow = -1;
+        unmutedOnTopRow = -1;
+        openArchiveOnPull = -1;
+        hideStoriesInArchiveRow = -1;
+        disableThumbsInDialogList = -1;
+        disableGlobalSearch = -1;
+        enableLastSeenDots = -1;
+        customTitleRow = -1;
     
-        emptyRows.add(rowCount++);
-        sectionRows.add(rowCount++);
-        disableFlipPhotos = rowCount++;
-        formatWithSeconds = rowCount++;
-        mentionByName = rowCount++;
-        replaceForward = rowCount++;
-        rearVideoMessages = rowCount++;
-        fullRecentStickersRow = rowCount++;
-        hideSendAsRow = rowCount++;
-        disableQuickReactionRow = rowCount++;
-        disableLockedAnimatedEmoji = rowCount++;
-        disableParametersFromBotLinks = rowCount++;
-        addItemToDeleteAllUnpinnedMessages = rowCount++;
-        disableSlideToNextChannel = rowCount++;
-        disableRecentFilesAttachment = rowCount++;
-        disableDefaultInAppBrowser = rowCount++;
+        emptyRows.add(-1);
+        sectionRows.add(-1);
+        disableFlipPhotos = -1;
+        formatWithSeconds = -1;
+        mentionByName = -1;
+        replaceForward = -1;
+        rearVideoMessages = -1;
+        fullRecentStickersRow = -1;
+        hideSendAsRow = -1;
+        disableQuickReactionRow = -1;
+        disableLockedAnimatedEmoji = -1;
+        disableParametersFromBotLinks = -1;
+        addItemToDeleteAllUnpinnedMessages = -1;
+        disableSlideToNextChannel = -1;
+        disableRecentFilesAttachment = -1;
+        disableDefaultInAppBrowser = -1;
 
-        emptyRows.add(rowCount++);
-        botSkipShare = rowCount++;
-        botSkipFullscreen = rowCount++;
+        emptyRows.add(-1);
+        botSkipShare = -1;
+        botSkipFullscreen = -1;
     
-        emptyRows.add(rowCount++);
-        sectionRows.add(rowCount++);
-        inappCameraRow = rowCount++;
-        systemCameraRow = rowCount++;
+        emptyRows.add(-1);
+        sectionRows.add(-1);
+        inappCameraRow = -1;
+        systemCameraRow = -1;
 
-        emptyRows.add(rowCount++);
-        sectionRows.add(rowCount++);
-        stickerSizeRow = rowCount++;
+        emptyRows.add(-1);
+        sectionRows.add(-1);
+        stickerSizeRow = -1;
 
-        emptyRows.add(rowCount++);
-        sectionRows.add(rowCount++);
+        emptyRows.add(-1);
+        sectionRows.add(-1);
         lastFmLoginRow = (BuildVars.LASTFM_API_KEY != null && BuildVars.LASTFM_API_KEY.length() > 2 && 
-                          BuildVars.LASTFM_API_SECRET != null && BuildVars.LASTFM_API_SECRET.length() > 2) ? rowCount++ : -1;
+                          BuildVars.LASTFM_API_SECRET != null && BuildVars.LASTFM_API_SECRET.length() > 2) ? -1 : -1;
 
         return true;
     }
@@ -394,7 +394,7 @@ public class ForkSettingsActivity extends BaseFragment {
                 toggleGlobalMainSetting("hideSensitiveData", view, false);
             } else if (position == customTitleRow) {
                 final String defaultValue = "Fork Client";
-                org.telegram.messenger.forkgram.ForkDialogs.CreateFieldAlert(
+                org.telegram.messenger.Telegram.ForkDialogs.CreateFieldAlert(
                     context,
                     LocaleController.getString("EditAdminRank", R.string.EditAdminRank),
                     MessagesController.getGlobalMainSettings().getString("forkCustomTitle", defaultValue),

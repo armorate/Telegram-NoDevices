@@ -1,4 +1,4 @@
-package org.telegram.messenger.forkgram
+package org.telegram.messenger.Telegram
 
 import android.app.Activity
 import android.content.Context
@@ -20,7 +20,7 @@ import java.net.URL
 
 object AppUpdater {
     private const val kCheckInterval = 30 * 60 * 1000 // 30 minutes.
-    private const val title = "The latest Forkgram version"
+    private const val title = "The latest Telegram version"
     private const val desc = ""
 
     private var downloadBroadcastReceiver: DownloadReceiver? = null

@@ -1,4 +1,4 @@
-package org.telegram.messenger.forkgram
+package org.telegram.messenger.Telegram
 
 import android.widget.Toast
 import org.telegram.messenger.*

@@ -57,7 +57,7 @@ jobs:
           git checkout update
 
 
-          file=`find . | grep forkgram`
+          file=`find . | grep Telegram`
 
           cp `find .. -iname "fd_part.txt"` part.txt
           cp `find .. -iname "fd_end.txt"` end.txt
@@ -90,7 +90,7 @@ jobs:
 
 
           git add $file
-          git commit -m "Updated Forkgram to ${versionName}."
+          git commit -m "Updated Telegram to ${versionName}."
 
           git push --force --set-upstream fork update
 

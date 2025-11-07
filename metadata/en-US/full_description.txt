@@ -1,4 +1,4 @@
-Forkgram is a simple fork of the Telegram Messenger with a few minor improvements.
+Telegram is a simple fork of the Telegram Messenger with a few minor improvements.
 
 Features
     Square avatars (sorry, I love it)

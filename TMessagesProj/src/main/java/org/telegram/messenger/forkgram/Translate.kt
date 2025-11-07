@@ -1,4 +1,4 @@
-package org.telegram.messenger.forkgram
+package org.telegram.messenger.Telegram
 
 import org.json.JSONObject
 import org.json.JSONTokener

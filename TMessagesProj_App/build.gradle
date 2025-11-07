@@ -51,7 +51,7 @@ android {
     def appSuffix = fdroid ? "" : ".beta"
     def flavorsConfig = fdroid ? "release" : "debug"
     if (fdroid) {
-        defaultConfig.applicationId = "org.forkgram.messenger"
+        defaultConfig.applicationId = "org.Telegram.messenger"
     }
 
     signingConfigs {
